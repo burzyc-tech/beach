@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   update:
-    if: ${{ !github.event.repository.is_template }}   # šablona sama nic nestahuje
+    if: ${{ github.repository != 'ondrahnat/beach-sablona' }}   # šablona sama nic nestahuje
     runs-on: ubuntu-latest
     timeout-minutes: 60
     environment:
